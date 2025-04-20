@@ -11,6 +11,7 @@ function App() {
       <h1>hello NeovaTech</h1>
       <h2>hii from shachi</h2>
       <h2>hii from rimon</h2>
+      <h1 className="asd"> hello from my mac bd</h1>
     </>
   );
 }
