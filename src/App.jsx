@@ -10,7 +10,7 @@ function App() {
     <>
       <h1>hello bello</h1>
       <h1>hello bello dello</h1>
-      <h1>hello bello dello sillo</h1>
+      <h1>hello bello dello cello</h1>
     </>
   );
 }
