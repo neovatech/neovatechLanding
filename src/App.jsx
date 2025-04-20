@@ -8,9 +8,8 @@ function App() {
 
   return (
     <>
-      <h1>hello bello</h1>
-      <h1>hello bello dello</h1>
-      <h1>hello bello dello cello</h1>
+      <h1>hello Neovatech</h1>
+      <h2>hii from rimon</h2>
     </>
   );
 }
