@@ -9,7 +9,7 @@ function App() {
       <nav className="navbar">
         <img src={viteLogo} alt="Vite Logo" className="logo" />
         <img src={reactLogo} alt="React Logo" className="logo react" />
-        <h2 className="brand ">NeovaTech</h2>
+        <h2 className="brand">NeovaTech</h2>
       </nav>
 
       <header className="hero-section">
@@ -20,6 +20,27 @@ function App() {
           <button className="secondary-btn">Our Services</button>
         </div>
       </header>
+
+      <section className="form-section">
+        <h2>Contact Us</h2>
+        <form className="contact-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" />
+          <input type="text" placeholder="Company Name" />
+          <select>
+            <option value="">Select Service</option>
+            <option value="web">Website Development</option>
+            <option value="app">Mobile App Development</option>
+            <option value="cloud">Cloud Deployment</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea placeholder="Your Message..." rows="4"></textarea>
+          <button type="submit" className="primary-btn">
+            Submit
+          </button>
+        </form>
+      </section>
 
       <footer className="footer">
         <p>Crafted with ❤️ by Team NeovaTech</p>
