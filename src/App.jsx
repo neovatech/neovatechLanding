@@ -14,7 +14,7 @@ function App() {
 
       <header className="hero-section">
         <h1>Welcome to NeovaTech</h1>
-        <h2>heyhihihi</h2>
+
         <p>Your reliable partner in full-stack & cloud solutions.</p>
         <div className="cta-buttons">
           <button className="primary-btn">Get Started</button>
@@ -23,7 +23,7 @@ function App() {
       </header>
 
       <section className="form-section">
-        <h2 className="qq">Contact Us</h2>
+        <h2 className="qq">Contact Ushh</h2>
         <form className="contact-form">
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email Address" required />
@@ -44,7 +44,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>Crafted with RIMON ❤️💙 Ishan by Team NeovaTech</p>
+        <p>Crafted with RIMON ❤️💙 by Team NeovaTech</p>
       </footer>
     </div>
   );
