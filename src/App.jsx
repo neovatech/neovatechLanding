@@ -14,6 +14,7 @@ function App() {
 
       <header className="hero-section">
         <h1>Welcome to NeovaTech</h1>
+        <h2>heyhihihi</h2>
         <p>Your reliable partner in full-stack & cloud solutions.</p>
         <div className="cta-buttons">
           <button className="primary-btn">Get Started</button>
