@@ -9,7 +9,8 @@ function App() {
   return (
     <>
       <h1>hello bello</h1>
-      <h2>hii from shachi</h2>
+      <h1>hello bello dello</h1>
+      <h1>hello bello dello cello</h1>
     </>
   );
 }
