@@ -22,7 +22,7 @@ function App() {
       </header>
 
       <section className="form-section">
-        <h2>Contact Us</h2>
+        <h2 className="qq">Contact Us</h2>
         <form className="contact-form">
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email Address" required />
@@ -31,7 +31,7 @@ function App() {
           <select>
             <option value="">Select Service</option>
             <option value="web">Website Development</option>
-            <option value="app">Mobile App Development</option>
+            <option value="app">Mobile DEVELOPMENT App Development</option>
             <option value="cloud">Cloud Deployment</option>
             <option value="other">Other</option>
           </select>
