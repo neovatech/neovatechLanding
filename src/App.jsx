@@ -43,7 +43,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>Crafted with ❤️ by Team NeovaTech</p>
+        <p>Crafted with RIMON ❤️💙 by Team NeovaTech</p>
       </footer>
     </div>
   );
