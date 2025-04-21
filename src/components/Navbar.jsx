@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-8 text-lg">
+      <ul className="hidden md:flex space-x-10 text-lg">
         <li>
           <a href="#home" className="hover:text-[#00BFFF] transition">
             Home
@@ -70,12 +70,12 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <ul className="fixed inset-0 top-20 bg-[#0B0C10] flex flex-col items-center space-y-8 pt-10 text-lg md:hidden z-50">
+        <ul className="fixed inset-0 top-20 bg-[#0B0C10] flex flex-col items-center space-y-6 pt-8 text-lg md:hidden z-50">
           <li>
             <a
               href="#home"
               onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF]"
+              className="hover:text-[#00BFFF] px-4"
             >
               Home
             </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
             <a
               href="#services"
               onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF]"
+              className="hover:text-[#00BFFF] px-4"
             >
               Services
             </a>
@@ -93,7 +93,7 @@ const Navbar = () => {
             <a
               href="#about"
               onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF]"
+              className="hover:text-[#00BFFF] px-4"
             >
               About
             </a>
@@ -102,7 +102,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF]"
+              className="hover:text-[#00BFFF] px-4"
             >
               Contact Us
             </a>
