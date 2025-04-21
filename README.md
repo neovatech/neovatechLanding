@@ -1,12 +1,71 @@
-# React + Vite
+# 🌐 NeovaTech Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official landing page of **NeovaTech**, a modern tech company built with innovation and passion. This project is crafted using **React.js** and **Tailwind CSS**, showcasing the digital presence of our brand.
 
-Currently, two official plugins are available:
+## 🚀 Live Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌍 Visit: [https://www.neovatech.in]
+(https://www.neovatech.in)
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔥 Modern & Responsive Design
+- 📱 Mobile-first layout
+- 📖 About Us & Mission Statement
+- 🛠️ Services Section (Web, Mobile, Cloud, UI/UX)
+- 🧑‍💼 Team Members (optional)
+- 📩 Contact Form
+- 📦 Project Showcase
+- 🧭 Footer with social links & navigation
+
+## 🛠️ Built With
+
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/) - Development & Build Tool
+
+## 📁 Folder Structure
+
+neovatech-landing/ ├── public/ ├── src/ │ ├── assets/ │ ├── components/ │ ├── App.jsx │ ├── index.css │ └── main.jsx ├── tailwind.config.js ├── vite.config.js └── package.json
+
+bash
+Copy
+Edit
+
+## 📦 Setup & Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/neovatech/neovatechLanding.git
+   cd neovatechLanding
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Start the development server:
+
+bash
+Copy
+Edit
+npm run dev
+Build for production:
+
+bash
+Copy
+Edit
+npm run build
+📸 Screenshots
+Coming soon...
+
+👥 Team NeovaTech
+Rimon Deb Nath (Founder, Full Stack Developer)
+
+
+[Add your team members here]
+
+📬 Contact
+📧 Email: info@neovatech.in
+🌐 Website: https://www.neovatech.in
+📸 Instagram | 💼 LinkedIn | 🐦 Twitter
