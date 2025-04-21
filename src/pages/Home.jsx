@@ -9,6 +9,7 @@ const HomePage = () => {
     "Web Hosting",
     "Graphic Design",
     "Content Writing",
+    "TEst", //testing only
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
