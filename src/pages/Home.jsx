@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import ServicesSection from "../components/services";
+import ErrorBoundary from "../components/errorboundary";
+import QuoteForm from "../components/Quoteform";
 
 const HomePage = () => {
   const services = [
@@ -26,9 +29,10 @@ const HomePage = () => {
           id="home"
           className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 text-center relative w-full overflow-hidden"
         >
-          <div className="absolute inset-0">
+          {/* Blurred Video Background */}
+          <div className="absolute inset-0 overflow-hidden">
             <video
-              className="w-full h-full object-cover opacity-40"
+              className="w-full h-full object-cover blur-md opacity-30 scale-110"
               src="/hero-video.mp4"
               autoPlay
               loop
@@ -36,6 +40,7 @@ const HomePage = () => {
             />
           </div>
 
+          {/* Foreground Content */}
           <div className="relative z-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -49,10 +54,20 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
-              className="text-xl"
+              className="text-xl max-w-2xl mx-auto p-auto"
             >
               Innovating Digital Solutions for Businesses Worldwide.
             </motion.p>
+            {/* Explore Button */}
+            <motion.a
+              href="#services"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.4 }}
+              className="inline-block px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300"
+            >
+              Explore
+            </motion.a>
           </div>
         </section>
 
@@ -86,43 +101,9 @@ const HomePage = () => {
         </section>
 
         {/* Services Section */}
-        <section
-          id="services"
-          className="py-16 bg-gray-100 text-center px-4 w-full overflow-hidden"
-        >
-          <h2 className="text-4xl font-bold mb-10">Our Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col justify-between p-6 bg-white rounded-2xl shadow hover:shadow-lg transition min-h-[300px] w-full"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">{service}</h3>
-                  <p className="text-gray-600">
-                    Elevate your business with our expert{" "}
-                    {service.toLowerCase()} solutions tailored to your unique
-                    needs.
-                  </p>
-                </div>
-                <button
-                  onClick={() => handleReadMore(index)}
-                  className={`mt-6 py-2 px-4 rounded-xl text-white font-medium transition-all duration-300 ${
-                    activeIndex === index
-                      ? "bg-red-500 hover:bg-red-600"
-                      : "bg-[#00BFFF] hover:bg-blue-600"
-                  }`}
-                >
-                  {activeIndex === index ? "Close" : "Read More"}
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        <ErrorBoundary>
+          <ServicesSection />
+        </ErrorBoundary>
 
         {/* Mobile Application Section */}
         <section className="py-20 px-6 bg-white text-center max-w-5xl mx-auto w-full">
@@ -148,29 +129,9 @@ const HomePage = () => {
           </motion.p>
         </section>
 
-        {/* Clients Section */}
-        <section className="py-20 bg-gray-100 text-center w-full overflow-hidden">
-          <h2 className="text-4xl font-bold mb-10">Our Trusted Clients</h2>
-          <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto w-full">
-            {[
-              "/client1.png",
-              "/client2.png",
-              "/client3.png",
-              "/client4.png",
-            ].map((logo, idx) => (
-              <motion.img
-                key={idx}
-                src={logo}
-                alt={`Client ${idx + 1}`}
-                className="h-16 w-auto object-contain"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.2 }}
-              />
-            ))}
-          </div>
-        </section>
+        <div>
+          <QuoteForm />
+        </div>
       </div>
     </div>
   );

@@ -4,46 +4,42 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0B0C10] text-white px-6 py-4 flex justify-between items-center shadow-md">
-      {/* Logo */}
-      <div className="flex items-center space-x-3">
-        <img
-          src="/logo.jpg"
-          alt="Logo"
-          className="h-14 w-14 rounded-full object-cover"
-        />
-        <span className="text-2xl font-bold">NEOVATECH</span>
+    <nav className="bg-black text-white px-8 py-4 flex justify-between items-center shadow-md">
+      {/* Logo only */}
+      <div className="flex items-center">
+        <img src="/logo.jpg" alt="Logo" className="h-24 w-32 object-contain" />
+        Neovatech
       </div>
 
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-10 text-lg">
+      {/* Desktop menu */}
+      <ul className="hidden md:flex space-x-10 text-base font-semibold items-center">
         <li>
-          <a href="#home" className="hover:text-[#00BFFF] transition">
+          <a href="#home" className="hover:text-yellow-400 transition">
             Home
           </a>
         </li>
         <li>
-          <a href="#services" className="hover:text-[#00BFFF] transition">
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="hover:text-[#00BFFF] transition">
+          <a href="#about" className="hover:text-yellow-400 transition">
             About
           </a>
         </li>
         <li>
-          <a href="#contact" className="hover:text-[#00BFFF] transition">
-            Contact Us
+          <a href="#services" className="hover:text-yellow-400 transition">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="#contact" className="hover:text-yellow-400 transition">
+            Contact
           </a>
         </li>
       </ul>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile menu button */}
       <div className="md:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           <svg
-            className="w-8 h-8 text-black"
+            className="w-8 h-8 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -68,43 +64,27 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile dropdown */}
       {isOpen && (
-        <ul className="fixed inset-0 top-20 bg-[#0B0C10] flex flex-col items-center space-y-6 pt-8 text-lg md:hidden z-50">
+        <ul className="fixed top-20 inset-x-0 bg-black text-white flex flex-col space-y-6 items-center pt-8 text-lg z-50">
           <li>
-            <a
-              href="#home"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF] px-4"
-            >
+            <a href="#home" onClick={() => setIsOpen(false)}>
               Home
             </a>
           </li>
           <li>
-            <a
-              href="#services"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF] px-4"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF] px-4"
-            >
+            <a href="#about" onClick={() => setIsOpen(false)}>
               About
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-[#00BFFF] px-4"
-            >
-              Contact Us
+            <a href="#services" onClick={() => setIsOpen(false)}>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setIsOpen(false)}>
+              Contact
             </a>
           </li>
         </ul>
