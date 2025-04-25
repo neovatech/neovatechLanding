@@ -82,3 +82,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes oceanFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-flow {
+  background: linear-gradient(135deg, #1d1f25, #003366, #1d1f25, #003366);
+  background-size: 400% 400%;
+  animation: oceanFlow 5s ease infinite;
+}

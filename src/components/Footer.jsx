@@ -2,9 +2,8 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 border-t border-gray-200 mt-10">
-      <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-        {/* Logo & Tagline */}
+    <footer className="bg-gray-100 border-t border-gray-200  font-code">
+      <div className="max-w-6xl mx-auto  py-8 flex flex-col md:flex-row justify-between items-center  md:space-y-0">
         <div className="flex flex-col items-center md:items-start">
           <img
             src="/logo.jpg"
@@ -19,7 +18,7 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="flex space-x-6">
           <a
-            href="#features"
+            href="#featuress"
             className="text-gray-600 hover:text-blue-600 transition"
           >
             Features
@@ -31,7 +30,7 @@ const Footer = () => {
             About
           </a>
           <a
-            href="#contact"
+            href="#contact-us"
             className="text-gray-600 hover:text-blue-600 transition"
           >
             Contact
@@ -41,15 +40,7 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex space-x-4">
           <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 hover:text-blue-500 transition"
-          >
-            <FaTwitter size={22} />
-          </a>
-          <a
-            href="https://github.com/"
+            href="https://github.com/neovatech"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-800 transition"

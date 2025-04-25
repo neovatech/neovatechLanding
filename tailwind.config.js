@@ -2,7 +2,33 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "gradient-flow": "gradientFlow 10s ease infinite",
+      },
+      keyframes: {
+        gradientFlow: {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
+      },
+      fontFamily: {
+        zentry: ["zentry", "sans-serif"],
+        general: ["general", "sans-serif"],
+        "circular-web": ["circular-web", "sans-serif"],
+        "robert-medium": ["robert-medium", "sans-serif"],
+        "robert-regular": ["robert-regular", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+        code: ['"Source Code Pro"', "monospace"],
+      },
+    },
+    plugins: [],
   },
-  plugins: [],
 };
