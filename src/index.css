@@ -72,11 +72,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #0e1720;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #0f113b;
   }
   button {
     background-color: #f9f9f9;
@@ -96,7 +96,51 @@ button:focus-visible {
 }
 
 .bg-gradient-flow {
-  background: linear-gradient(135deg, #1d1f25, #003366, #1d1f25, #003366);
+  background: linear-gradient(135deg, #fff2f2, #a9b5df, #7886c7, #2d336b);
   background-size: 400% 400%;
   animation: oceanFlow 5s ease infinite;
+}
+/* Base styles */
+:root {
+  --background-color: black;
+  --text-color: hsl(0, 0%, 90%);
+}
+
+.sliced-wrapper {
+  position: relative;
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+  line-height: 1;
+}
+
+/* Align top and bottom in the same space */
+.sliced-wrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* First visible half */
+.sliced-wrapper .top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  position: relative; /* keep it above .bottom */
+  color: var(--text-color);
+  z-index: 2;
+}
+
+/* Second sliced half with gradient effect */
+.sliced-wrapper .bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+  transform: translateX(-0.02em);
+  pointer-events: none;
 }

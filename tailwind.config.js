@@ -28,6 +28,12 @@ export default {
         oswald: ["Oswald", "sans-serif"],
         code: ['"Source Code Pro"', "monospace"],
       },
+      colors: {
+        customBlue: "#A9B5DF",
+        grad2: "#7886C7",
+        grad3: "#7886C7",
+        grad4: "#2D336B",
+      },
     },
     plugins: [],
   },

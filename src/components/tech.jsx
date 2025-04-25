@@ -48,14 +48,14 @@ const technologies = [
     image: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
   },
   {
-    name: "Django",
-    image: "https://cdn.worldvectorlogo.com/logos/django-community.svg",
+    name: "FLutter",
+    image: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
   },
 ];
 
 const Technologies = () => {
   return (
-    <section className="bg-black py-16 px-6 md:px-16">
+    <section className="bg-grad4 py-16 px-6 md:px-16 font-code ">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

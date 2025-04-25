@@ -9,12 +9,9 @@ import MobileAppSection from "../components/mobile";
 const HomePage = () => {
   const services = [
     "Website Development",
-    "Digital Marketing",
     "Mobile Application Development",
     "Web Hosting",
     "Graphic Design",
-    "Content Writing",
-    "TEst", //testing only
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -25,7 +22,7 @@ const HomePage = () => {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="bg-white text-gray-900 font-oswald">
+      <div className="bg-white text-gray-900 font-code">
         {/* Hero Section */}
         <section
           id="home"
@@ -41,8 +38,8 @@ const HomePage = () => {
               muted
             /> */}
             <img
-              className="w-full h-full object-cover blur-sm opacity-30 scale-110"
-              src="https://img.freepik.com/free-vector/gradient-technology-futuristic-background_23-2149122416.jpg?t=st=1745501436~exp=1745505036~hmac=161d362bf8c0b3249d0cf12d49d58a9be97ebb65a2f810803c09e5ef9012cfea&w=2000"
+              className="w-full h-full object-cover opacity-50 scale-110"
+              src="imgg2.jpg"
               alt="img"
             />
           </div>
@@ -81,7 +78,7 @@ const HomePage = () => {
         {/* Introduction Section */}
         <section
           id="about"
-          className="py-20 px-6 text-center max-w-5xl mx-auto w-full"
+          className="py-20 px-6 text-center max-w-full mx-auto w-full "
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -90,14 +87,14 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold mb-6"
           >
-            About Neovatech
+            About Us
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600"
+            className="text-lg text-gray-600 max-w-3xl mx-auto text-justify px-4 sm:px-0"
           >
             Neovatech is your trusted partner for transforming business ideas
             into dynamic digital solutions. We specialize in web development,
@@ -118,27 +115,6 @@ const HomePage = () => {
           <ErrorBoundary>
             <MobileAppSection />
           </ErrorBoundary>
-
-          {/* <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-bold mb-6"
-          >
-            Mobile Application Development
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600"
-          >
-            Our team crafts cutting-edge mobile apps that engage users and
-            deliver seamless digital experiences. From Android to iOS — we turn
-            your app ideas into reality.
-          </motion.p> */}
         </section>
 
         <div id="contact-us">

@@ -105,8 +105,8 @@ import "swiper/css";
 
 const MobileAppSection = () => {
   return (
-    <section className="w-full bg-white text-black py-12 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="w-full bg-white text-black py-12 px-6 overflow-hidden ">
+      <div className="max-w-full mx-auto text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -148,15 +148,15 @@ const MobileAppSection = () => {
           >
             {[
               {
-                img: "https://img.freepik.com/free-vector/flat-design-ui-kit-collection_23-2149188526.jpg?t=st=1745501061~exp=1745504661~hmac=93ad83d14a0a5512cc2453ecd4ba40324400d9576789aac9cca13e3462aa813e&w=2000",
+                img: "ui.jpg",
                 label: "Modern UI Designs",
               },
               {
-                img: "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg?t=st=1745500831~exp=1745504431~hmac=6bc880545222748d18ed169e72e1439aa1ef4ee44469bd8e2397b071306566a6&w=2000",
+                img: "ux.avif",
                 label: "Seamless UX Flow",
               },
               {
-                img: "https://img.freepik.com/free-photo/smartphone-with-user-interface-concept_52683-104212.jpg?t=st=1745502088~exp=1745505688~hmac=1618afc7bd6834577a3d7ac14762cbe1cdc67a4729203ff8806286bef5802057&w=1800",
+                img: "tech.jpg",
                 label: "Tech-Powered Features",
               },
             ].map((item, i) => (

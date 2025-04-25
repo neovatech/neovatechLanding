@@ -3,7 +3,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 border-t border-gray-200  font-code">
-      <div className="max-w-6xl mx-auto  py-8 flex flex-col md:flex-row justify-between items-center  md:space-y-0">
+      <div className="max-w-6xl mx-auto  py-2 flex flex-col md:flex-row justify-between items-center  md:space-y-0">
         <div className="flex flex-col items-center md:items-start">
           <img
             src="/logo.jpg"
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center text-gray-400 text-xs py-3 border-t border-gray-200">
-        © 2025 Neovatech. All rights reserved.
+        © 2025 NeovaTech.in All rights reserved.
       </div>
     </footer>
   );

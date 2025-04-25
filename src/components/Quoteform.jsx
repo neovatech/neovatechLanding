@@ -58,9 +58,9 @@ const QuoteForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-flow flex items-center justify-center py-8">
+    <div className="min-h-screen bg-gradient-to-b from-customBlue via-grad2 via-grad3 to-grad4 flex items-center justify-center py-8 font-code">
       <motion.div
-        className="max-w-3xl w-full bg-gray-800/90 rounded-3xl shadow-xl p-10 border border-blue-700"
+        className="max-w-xl w-full bg-white rounded-sm shadow-xl p-10  border-blue-950"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -71,7 +71,7 @@ const QuoteForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="flex flex-wrap gap-6">
             <div className="flex-1 min-w-[45%]">
-              <label className="block text-gray-300 font-semibold mb-2">
+              <label className="block text-gray-400 font-semibold mb-2">
                 First Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -85,13 +85,13 @@ const QuoteForm = () => {
               />
             </div>
             <div className="flex-1 min-w-[45%]">
-              <label className="block text-gray-300 font-semibold mb-2">
-                Second Name
+              <label className="block text-gray-400 font-semibold mb-2">
+                Last Name
               </label>
               <input
                 type="text"
                 name="secondName"
-                placeholder="Second Name"
+                placeholder="Last Name"
                 value={form.secondName}
                 onChange={handleChange}
                 className="w-full border rounded-lg border-teal-600 focus:border-teal-400 focus:ring-2 focus:ring-teal-600 bg-gray-700 text-white px-4 py-2 transition-all outline-none"
@@ -100,7 +100,7 @@ const QuoteForm = () => {
           </div>
           <div className="flex flex-wrap gap-6 mt-6">
             <div className="flex-1 min-w-[45%]">
-              <label className="block text-gray-300 font-semibold mb-2">
+              <label className="block text-gray-400 font-semibold mb-2">
                 Email<span className="text-red-500">*</span>
               </label>
               <input
@@ -115,7 +115,7 @@ const QuoteForm = () => {
             </div>
 
             <div className="flex-1 min-w-[45%] relative">
-              <label className="block text-gray-300 font-semibold mb-2">
+              <label className="block text-gray-400 font-semibold mb-2">
                 Interested In<span className="text-red-500">*</span>
               </label>
 
@@ -161,7 +161,7 @@ const QuoteForm = () => {
             </div>
           </div>
           <div className="mt-6">
-            <label className="block text-gray-300 font-semibold mb-2">
+            <label className="block text-gray-400 font-semibold mb-2">
               Message
             </label>
             <textarea
@@ -170,13 +170,12 @@ const QuoteForm = () => {
               value={form.message}
               onChange={handleChange}
               className="w-full border rounded-lg border-teal-600 focus:border-teal-400 focus:ring-2 focus:ring-teal-600 bg-gray-700 text-white px-4 py-2 transition-all outline-none min-h-[80px]"
-              required
             />
           </div>
           <div className="mt-8 text-center">
             <motion.button
               type="submit"
-              className="bg-blue-700 hover:bg-blue-800 text-white font-bold px-10 py-3 rounded-xl shadow-lg transition-all duration-200"
+              className="bg-grad2 hover:bg-grad4 text-white font-bold px-10 py-3 rounded-xl shadow-lg transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >

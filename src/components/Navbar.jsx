@@ -4,9 +4,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [atTop, setAtTop] = useState(true);
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
+      setAtTop(window.scrollY <= 10);
+
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setShowNavbar(false); // scrolling down
       } else {
@@ -17,28 +20,26 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
   }, [lastScrollY]);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ease-in-out ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      } bg-black bg-opacity-60 backdrop-blur-md text-white px-8 py-4 flex justify-between items-center shadow-lg`}
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[70%] z-50 px-8 py-4 flex justify-between items-center transition-all duration-500
+      ${
+        showNavbar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+      }
+      ${
+        atTop ? "bg-gray-900" : "bg-black/60 backdrop-blur-md"
+      } rounded-full shadow-md`}
     >
       {/* Logo */}
-      <div className="flex items-center font-code">
-        <img
-          src="/logo.jpg"
-          alt="Logo"
-          className="h-16 w-16 object-contain mr-2 transform transition-transform duration-300 hover:scale-110" // Increase logo size here
-        />
-        <span className="text-2xl font-bold text-shadow-lg">Neovatech</span>
+      <div className="sliced-wrapper">
+        <div className="sliced top">NeovaTech</div>
+        <div className="sliced bottom" aria-hidden="true">
+          NeovaTech
+        </div>
       </div>
 
       {/* Desktop Menu */}
@@ -47,7 +48,7 @@ const Navbar = () => {
           <li key={id}>
             <a
               href={`#${id}`}
-              className="hover:text-yellow-400 transition-all transform duration-300 hover:scale-105"
+              className="text-white hover:text-yellow-400 transition-all transform duration-300 hover:scale-105"
             >
               {id.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
             </a>
@@ -63,7 +64,6 @@ const Navbar = () => {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             {isOpen ? (
               <path
