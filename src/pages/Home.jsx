@@ -52,7 +52,7 @@ const HomePage = () => {
               transition={{ duration: 1 }}
               className="text-5xl font-bold mb-4"
             >
-              Welcome to Neovatech
+              Welcome to NeovaTech
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
